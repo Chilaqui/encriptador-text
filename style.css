@@ -223,3 +223,8 @@ main {
 .contenedor_botones a:hover {
     color: #00ffff;
 }
+
+/*Accion que hace que desaparesca el muñeco*/
+.ocultar{
+    display: none;
+}
