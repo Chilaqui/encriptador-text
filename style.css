@@ -12,7 +12,7 @@ header{
     width: 100px; /*tamaño del logo*/
     height: 50px;
     padding-top: 20px; /*Margen de arriba*/
-    padding-left: 50%;/*Posicion del logo a mitad de la pagina*/
+    padding-left: 0%;/*Posicion del logo a mitad de la pagina*/
 }
 
 main{
@@ -29,10 +29,9 @@ main{
 
 .contenedor_caja_texto{
     position: absolute; /*Posicion de la caja*/
-    left: 200px; /*Posicion de los lados*/ 
-    top: 100px; /*Posision superior he inferior*/
-    padding-left: 100px;
-    width: 1080px; /*Tamaño ancho de la caja*/
+    left: 150px; /*Posicion de los lados*/ 
+    top: 80px; /*Posision superior he inferior*/
+    width: 1200px; /*Tamaño ancho de la caja*/
     height: 600px; /*Tamaño largo caja*/
 }
 
@@ -45,19 +44,21 @@ textarea::placeholder{ /*Letras del placeholder*/
 }
 /* color botnones #0A3871 */
 .caja_texto{
-
     width: 90%;
     height: 100%;
     border: none;
     background-color: #007f7f; /*Color de la caja de texto*/
     cursor: text; /*Cuando pasa el cursos cambia el incono*/
     color: white; /*Color de la letra al escribir*/
+    text-align: center;
+    top: 50px;
+    font-size: 25px;
 }
 
 .alerta{ /*Posicion del alerta*/
     position:absolute;
-    top: 680px;/*Ajuste de alerta*/
-    left: 305px;/*Ajuste del alerta*/
+    top: 660px;/*Ajuste de alerta*/
+    left: 160px;/*Ajuste del alerta*/
     display: flex; /*Acomoda el texto de lado lateral izquierdo del icono*/
     font-size: 20px; /*Tamaño de ñetra*/
     color: #495057; /*Color de letra*/
@@ -111,8 +112,9 @@ textarea::placeholder{ /*Letras del placeholder*/
 .seccion_2{
     display: block;
     position:relative;
+    top: 20px;
     width: 400px; /*Ancho de la caja*/
-    height: 800px; /*Largo de la caja */
+    height: 850px; /*Largo de la caja */
     right: 100px; /*Lacaja respectivo hacia la derecha*/
     padding-right: 500px;
     background-color:#00bfbf;
@@ -124,16 +126,17 @@ textarea::placeholder{ /*Letras del placeholder*/
 .contenedor_muneco{
     position: absolute;
     left: 80px;/*Lado derecho del div*/
-    top: 20px; /*Parte superior de la caja*/
+    top: 5px; /*Parte superior de la caja*/
     box-sizing: border-box;
-    padding-top: 50px;/*Posision superior*/
+    padding-top: 5px;/*Posision superior*/
 }
 
 .contenedor_parrafo{
     position: absolute;
     box-sizing: border-box;
-    top: 600px;
-    left: 100px;  
+    top: 350px;/*Distacia entre imagen */
+    left: 100px;  /*space in the side left*/
+
 }
 .contenedor_parrafo h3{
     font-weight: bold;
@@ -144,6 +147,88 @@ textarea::placeholder{ /*Letras del placeholder*/
 }
 
 .contenedor_parrafo p{
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 900;
+    font-family:sans-serif; /*Estilo de letra*/
+    font-weight: 400; /*Fuerza del color de la letra*/
+    font-size: 16px;/*Tamaño de la letra*/
+    text-align: center; /*Texto alineado al centro*/
+    color: #495057; /*Color de la letra*/
+    padding-top: 20px; /*Margen superior respecto al parrafo h3*/
 }
+
+
+.btn_copiar:hover{
+    background-color: #00ffff;
+    transform: scale(1.05);
+}
+
+.contenedor_resultado{
+    color: #495057;
+    font-size: 25px;
+}
+
+.contenedor_copiar{ /*Modificacion de la caja de copiar*/
+    border-radius: 24px; /*Bordes redondeados*/
+    display: flex;
+    position: absolute;
+    bottom: 100px;
+    top: 480px;
+    right: 60px;
+    background-color:#005f5f;
+    padding-left: 50px;
+    padding-top: 35px;
+    color: white;
+    text-align: center;
+}
+
+.btn_copiar{
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    background-color: #00bfbf;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    border: 2px solid #005f5f;
+    cursor: pointer;
+    position: relative;
+    top: 250px; /*Margen entre la caja y el boton*/
+    right: 25px; /*Distacia entre el lado derecho*/
+}
+
+/* configuracion del link a el git-hub */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+section{
+    min-width: 300px;
+}
+
+footer {
+
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.creador a {
+    color: white;
+    text-decoration: none;
+}
+
+.creador a:hover {
+    color: #00ffff;
+}
+
