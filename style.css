@@ -35,8 +35,7 @@ textarea::placeholder{ /*Letras del placeholder*/
     color: white; /*Color letra*/
     font-size: 30px; /*Tamaño letra*/
     text-align: center; /*Aliniado al centro*/
-    line-height: 500px; /*Alineado hacia abajo*/
-    
+    line-height: 500px; /*Alineado hacia abajo*/ 
 }
 /* color botnones #0A3871 */
 .caja_texto{
@@ -50,6 +49,7 @@ textarea::placeholder{ /*Letras del placeholder*/
     top: 50px;
     font-size: 25px;
     border-radius: 24px;
+    resize: none; /*Se quita la opcion de poder mover el cuadro del texto*/
 }
 
 .alerta{ /*Posicion del alerta*/
