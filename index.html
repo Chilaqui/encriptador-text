@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!--Crando el area del logo-->
+    <header>
+        <img class="logo" src="photos/Logoimaguenes.png" alt="Logo de Alura">
+    </header>
+    <!--Creando en area del contenido-->
+    <main>
+        <!--Creamos una seccion para los espacios del la pantalla-->
+        <section class="seccion_1">
+            <div class="contenedor_caja_texto">
+                <!--Creamos el texarea para poner el placehoder, permite que el usuario ingrese en texto en el espacio con sus respectivas clases-->
+                <textarea placeholder="Ingrese el texto aqui" class="caja_texto"></textarea>
+            </div>
+            <!--se crea el div para la alerta con su clase-->
+            <div class="alerta">
+                <img src="photos/iconoAlerta.png" alt="Alerta">
+                <p>Solo letras minúsculas y sin acentos</p>
+            </div>
+            <!--Se crea el div para los botones de encriptar y desencriptar con sus clases y sus valores-->
+            <div class="contenedor_botones">
+                <input type="button" class="btn_encriptar" value="Encriptar">
+                <input type="button" class="btn_desencriptar" value="Desencriptar">
+            </div>
+        </section>
+        <section class="seccion_2">
+            <div class="contendor_muñeco">
+                <img src="photos/Muñecoimaguenes.png" alt="Muñeco">
+            </div>
+            <div class="contendor_parrafo">
+                <h3>Ningun mensaje fue <br>encontrado</h3>
+                <p>Ingresa el texto que desees encriptar o <br> desencriptar.</p>
+            </div>
+            <div class="contenedor_copiar">
+                <input type="button" class="btn_copiar" value="Copiar">
+            </div>
+            <div class="contendor_resultado">
+                <p class="texto_resultado"></p>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
