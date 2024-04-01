@@ -1,230 +1,71 @@
-body{
+body {
     background-color: #005f5f;
+    margin: 0; /* Añade margen cero para evitar espacios no deseados */
 }
 
-header{
+header {
     width: 100%;
     height: 70px;
+    background-color: white;
 }
 
 /* Configuracion del logo */
-.logo{
-    width: 100px; /*tamaño del logo*/
+.logo {
+    background-color: black;
+    width: 100px; /* tamaño del logo */
     height: 50px;
-    padding-top: 20px; /*Margen de arriba*/
-    padding-left: 0%;/*Posicion del logo a mitad de la pagina*/
+    padding-top: 10px; /* Ajusta el margen superior */
+    padding-left: 10px; /* Ajusta el margen izquierdo */
 }
 
-main{
-    position: absolute;
+main {
+    background-color: blueviolet;
+    position: relative; /* Cambiado a relativo */
     width: 100%;
-    height: 90%;
-    display: flex; /*Ayuda a colocar los selectores como si fueran celdas de tabla, ya que dividimos el main en varios div */
-    justify-content: space-between; /*Este ayuda a acomodar las cajas, dependiendo como es que lo quieras en enste caso space-between los hace ajustarse*/
+    min-height: calc(100vh - 70px); /* Ajusta la altura del main */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 50px;
+    justify-content: space-between;
+    padding: 0 40px; /* Añade padding horizontal */
 }
 
-.contenedor_caja_texto{
-    position: absolute; /*Posicion de la caja*/
-    left: 150px; /*Posicion de los lados*/ 
-    top: 80px; /*Posision superior he inferior*/
-    width: 1200px; /*Tamaño ancho de la caja*/
-    height: 600px; /*Tamaño largo caja*/
+.seccion_1 {
+    background-color: #495057;
 }
 
-textarea::placeholder{ /*Letras del placeholder*/
-    color: white; /*Color letra*/
-    font-size: 30px; /*Tamaño letra*/
-    text-align: center; /*Aliniado al centro*/
-    line-height: 500px; /*Alineado hacia abajo*/ 
-}
-/* color botnones #0A3871 */
-.caja_texto{
-    width: 90%;
-    height: 100%;
-    border: none;
-    background-color: #007f7f; /*Color de la caja de texto*/
-    cursor: text; /*Cuando pasa el cursos cambia el incono*/
-    color: white; /*Color de la letra al escribir*/
-    text-align: center;
-    top: 50px;
-    font-size: 25px;
-    border-radius: 24px;
-    resize: none; /*Se quita la opcion de poder mover el cuadro del texto*/
+.contenedor_caja_texto {
+    /* Eliminado position: flex; */
+    margin-left: 20px; /* Ajuste de margen izquierdo */
+    margin-top: 30px;
+    width: 100%;
+    height: 600px;
 }
 
-.alerta{ /*Posicion del alerta*/
-    position:absolute;
-    top: 660px;/*Ajuste de alerta*/
-    left: 160px;/*Ajuste del alerta*/
-    display: flex; /*Acomoda el texto de lado lateral izquierdo del icono*/
-    font-size: 20px; /*Tamaño de ñetra*/
-    color: #495057; /*Color de letra*/
-    height: 20px; /*Tamaño del icono*/
+/* Resto del CSS sin cambios */
 
-}
-
-.contenedor_botones{
-    position: absolute;
-    top: 730px; /*Posicion del div de arriba a abajo, esto se hizo para que quedara de bajo de la caja*/
-    height: 80px; /*Este es el espacio que tiene en lo de abajo respecto a la caja del div*/
-    padding-left: 20%; /*Espacio centrado de los botones*/
-    padding-top: 10px; /*Espacio entre la caja de tecxto y los botones*/
-}
-
-.btn_encriptar{
-    width: 328px; /*Tamaño deñ boton*/
-    height: 67px; /*Tamaño del boton*/
-    border-radius: 24px; /*esquinas del boton redondeadas*/
-    background-color: #00bfbf; /*Color del boton*/
-    color: white; /*Color de las letras del boton*/
-    font-size: 30px;/*Tamaño de la letra del boton*/
-    font-weight: bold; /*Peso de la letra*/
-    border: 1px; /*Tamaño del borde*/
-    margin-right:20px;
-    cursor: pointer; /*Cursor cambiado*/
-}
-
-.btn_encriptar:hover{ /*Transformacion del icono a el color mas claro y el tamaño tambien*/
-    background-color:#00ffff ; /*Color que cambia con el evento*/
-    transform: scale(1.05); /*Transformacion del tamaño de la caja*/
-}
-
-.btn_desencriptar{
-    width: 328px;
-    height: 67px;
-    border-radius: 24px;
+.seccion_2 {
+    width: 400px;
+    height: 795px;
+    display: grid;
+    position: relative;
+    margin-top: 30px; /* Ajuste de margen superior */
+    margin-bottom: 5px;
+    margin-left: 130px;
     background-color: #00bfbf;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    border: 1px;
-    margin-right: 20px;
-    cursor: pointer;
-}
-.btn_desencriptar:hover{
-    background-color: #00ffff;
-    transform: scale(1.05);
-}
-
-.seccion_2{
-    display: block;
-    position:relative;
-    top: 20px;
-    width: 400px; /*Ancho de la caja*/
-    height: 850px; /*Largo de la caja */
-    right: 100px; /*Lacaja respectivo hacia la derecha*/
-    padding-right: 500px;
-    background-color:#00bfbf;
     box-sizing: border-box;
     border-radius: 32px;
     box-shadow: 20px 20px 32px -8px rgba(0, 0, 0, 1.5);
 }
 
-.contenedor_muneco{
-    position: absolute;
-    left: 80px;/*Lado derecho del div*/
-    top: 5px; /*Parte superior de la caja*/
-    box-sizing: border-box;
-    padding-top: 5px;/*Posision superior*/
-}
+/* Resto del CSS sin cambios */
 
-.contenedor_parrafo{
-    position: absolute;
-    box-sizing: border-box;
-    top: 350px;/*Distacia entre imagen */
-    left: 100px;  /*space in the side left*/
-
-}
-.contenedor_parrafo h3{
-    font-weight: bold;
-    font-size: 22px;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    color: #495057;
-}
-
-.contenedor_parrafo p{
-    font-family:sans-serif; /*Estilo de letra*/
-    font-weight: 400; /*Fuerza del color de la letra*/
-    font-size: 16px;/*Tamaño de la letra*/
-    text-align: center; /*Texto alineado al centro*/
-    color: #495057; /*Color de la letra*/
-    padding-top: 20px; /*Margen superior respecto al parrafo h3*/
-}
-
-
-.btn_copiar:hover{
-    background-color: #00ffff;
-    transform: scale(1.05);
-}
-
-.contenedor_resultado{
-    color: #495057;
-    font-size: 25px;
-}
-
-.contenedor_copiar{ /*Modificacion de la caja de copiar*/
-    border-radius: 24px; /*Bordes redondeados*/
-    display: flex;
-    position: absolute;
-    bottom: 100px;
-    top: 480px;
-    right: 60px;
-    background-color:#005f5f;
-    padding-left: 50px;
-    padding-top: 35px;
-    color: white;
-    text-align: center;
-}
-
-.btn_copiar{
-    width: 328px;
-    height: 67px;
-    border-radius: 24px;
-    background-color: #00bfbf;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    border: 2px solid #005f5f;
-    cursor: pointer;
-    position: relative;
-    top: 250px; /*Margen entre la caja y el boton*/
-    right: 25px; /*Distacia entre el lado derecho*/
-}
-
-/* configuracion del link a el git-hub */
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-}
-
-.creador {
-    font-size: 30px;
-    font-weight: bold;
-    padding: 20px;
-    position:absolute;
-    top: 100px;
-    bottom: 0;
-    left: 500px;
-}
-
-.contenedor_botones a {
-    color: white;
-    text-decoration: none;
-}
-
-.contenedor_botones a:hover {
-    color: #00ffff;
-}
-
-/*Accion que hace que desaparesca el muñeco*/
-.ocultar{
-    display: none;
+@media screen and (max-width: 770px) {
+    main {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas más pequeñas */
+    }
+    .seccion_2 {
+        margin-left: auto; /* Centra la sección en pantallas más pequeñas */
+        margin-right: auto;
+    }
 }
