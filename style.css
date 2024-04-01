@@ -1,0 +1,149 @@
+body{
+    background-color: #005f5f;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+}
+
+/* Configuracion del logo */
+.logo{
+    width: 100px; /*tamaño del logo*/
+    height: 50px;
+    padding-top: 20px; /*Margen de arriba*/
+    padding-left: 50%;/*Posicion del logo a mitad de la pagina*/
+}
+
+main{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    display: flex; /*Ayuda a colocar los selectores como si fueran celdas de tabla, ya que dividimos el main en varios div */
+    justify-content: space-between; /*Este ayuda a acomodar las cajas, dependiendo como es que lo quieras en enste caso space-between los hace ajustarse*/
+}
+
+.seccion_1{
+
+}
+
+.contenedor_caja_texto{
+    position: absolute; /*Posicion de la caja*/
+    left: 200px; /*Posicion de los lados*/ 
+    top: 100px; /*Posision superior he inferior*/
+    padding-left: 100px;
+    width: 1080px; /*Tamaño ancho de la caja*/
+    height: 600px; /*Tamaño largo caja*/
+}
+
+textarea::placeholder{ /*Letras del placeholder*/
+    color: white; /*Color letra*/
+    font-size: 30px; /*Tamaño letra*/
+    text-align: center; /*Aliniado al centro*/
+    line-height: 500px; /*Alineado hacia abajo*/
+    
+}
+/* color botnones #0A3871 */
+.caja_texto{
+
+    width: 90%;
+    height: 100%;
+    border: none;
+    background-color: #007f7f; /*Color de la caja de texto*/
+    cursor: text; /*Cuando pasa el cursos cambia el incono*/
+    color: white; /*Color de la letra al escribir*/
+}
+
+.alerta{ /*Posicion del alerta*/
+    position:absolute;
+    top: 680px;/*Ajuste de alerta*/
+    left: 305px;/*Ajuste del alerta*/
+    display: flex; /*Acomoda el texto de lado lateral izquierdo del icono*/
+    font-size: 20px; /*Tamaño de ñetra*/
+    color: #495057; /*Color de letra*/
+    height: 20px; /*Tamaño del icono*/
+
+}
+
+.contenedor_botones{
+    position: absolute;
+    top: 730px; /*Posicion del div de arriba a abajo, esto se hizo para que quedara de bajo de la caja*/
+    height: 80px; /*Este es el espacio que tiene en lo de abajo respecto a la caja del div*/
+    padding-left: 20%; /*Espacio centrado de los botones*/
+    padding-top: 10px; /*Espacio entre la caja de tecxto y los botones*/
+}
+
+.btn_encriptar{
+    width: 328px; /*Tamaño deñ boton*/
+    height: 67px; /*Tamaño del boton*/
+    border-radius: 24px; /*esquinas del boton redondeadas*/
+    background-color: #00bfbf; /*Color del boton*/
+    color: white; /*Color de las letras del boton*/
+    font-size: 30px;/*Tamaño de la letra del boton*/
+    font-weight: bold; /*Peso de la letra*/
+    border: 1px; /*Tamaño del borde*/
+    margin-right:20px;
+    cursor: pointer; /*Cursor cambiado*/
+}
+
+.btn_encriptar:hover{ /*Transformacion del icono a el color mas claro y el tamaño tambien*/
+    background-color:#00ffff ; /*Color que cambia con el evento*/
+    transform: scale(1.05); /*Transformacion del tamaño de la caja*/
+}
+
+.btn_desencriptar{
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    background-color: #00bfbf;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    border: 1px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.btn_desencriptar:hover{
+    background-color: #00ffff;
+    transform: scale(1.05);
+}
+
+.seccion_2{
+    display: block;
+    position:relative;
+    width: 400px; /*Ancho de la caja*/
+    height: 800px; /*Largo de la caja */
+    right: 100px; /*Lacaja respectivo hacia la derecha*/
+    padding-right: 500px;
+    background-color:#00bfbf;
+    box-sizing: border-box;
+    border-radius: 32px;
+    box-shadow: 20px 20px 32px -8px rgba(0, 0, 0, 1.5);
+}
+
+.contenedor_muneco{
+    position: absolute;
+    left: 80px;/*Lado derecho del div*/
+    top: 20px; /*Parte superior de la caja*/
+    box-sizing: border-box;
+    padding-top: 50px;/*Posision superior*/
+}
+
+.contenedor_parrafo{
+    position: absolute;
+    box-sizing: border-box;
+    top: 600px;
+    left: 100px;  
+}
+.contenedor_parrafo h3{
+    font-weight: bold;
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #495057;
+}
+
+.contenedor_parrafo p{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+}
