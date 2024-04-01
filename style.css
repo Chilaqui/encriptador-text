@@ -67,5 +67,6 @@ main {
     .seccion_2 {
         margin-left: auto; /* Centra la sección en pantallas más pequeñas */
         margin-right: auto;
+        margin:  30px auto 5px;
     }
 }
