@@ -1,72 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #005f5f;
     margin: 0; /* Añade margen cero para evitar espacios no deseados */
 }
 
+/* Configuracion del header */
 header {
     width: 100%;
-    height: 70px;
-    background-color: white;
+    height: 60px;
 }
 
 /* Configuracion del logo */
 .logo {
-    background-color: black;
+    padding: 5px;
+    margin-left: 95px;
     width: 100px; /* tamaño del logo */
     height: 50px;
-    padding-top: 10px; /* Ajusta el margen superior */
-    padding-left: 10px; /* Ajusta el margen izquierdo */
+    
 }
 
 main {
-    background-color: blueviolet;
-    position: relative; /* Cambiado a relativo */
     width: 100%;
-    min-height: calc(100vh - 70px); /* Ajusta la altura del main */
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 50px;
-    justify-content: space-between;
-    padding: 0 40px; /* Añade padding horizontal */
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
+
 .seccion_1 {
-    background-color: #495057;
+    width: 60%;
+}
+
+div{
+    flex-grow: 1;
+    width: 370px;
+    margin: auto;
 }
 
 .contenedor_caja_texto {
-    /* Eliminado position: flex; */
-    margin-left: 20px; /* Ajuste de margen izquierdo */
+    margin-left: 0px; /* Ajuste de margen izquierdo */
     margin-top: 30px;
+    margin-right: 0;
     width: 100%;
-    height: 600px;
+    height: 80%;
+}
+
+textarea::placeholder{ /*Letras del placeholder*/
+    color: white; /*Color letra*/
+    font-size: 30px; /*Tamaño letra*/
+    text-align: center; /*Aliniado al centro*/
+    line-height: 600px; /*Alineado hacia abajo*/ 
+}
+.caja_texto{
+    margin-right: 0;
+    width: 80%;
+    height: 100%;
+    resize: none;
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 25px;
+    border-radius: 24px;
+    border: 0;
+    outline: 0;
+    background-color: #00bfbf;
+}
+
+.alerta{
+    width: 31%;
+    color: white;
+    display: flex;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+.alerta:hover{
+    color:tomato;
+}
+
+.contenedor_botones{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn_encriptar, .btn_desencriptar{
+    width: 30%;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 24px;
+    border: none;
+    background-color:#00bfbf;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn_encriptar:hover{
+    background-color: aqua;
+    transform: scale(1.05);
+}
+.btn_desencriptar:hover{
+    background-color: aqua;
+    transform: scale(1.05);
 }
 
 /* Resto del CSS sin cambios */
 
 .seccion_2 {
-    width: 400px;
+    margin-top: 30px;
+    width: 30%;
     height: 795px;
-    display: grid;
-    position: relative;
-    margin-top: 30px; /* Ajuste de margen superior */
-    margin-bottom: 5px;
-    margin-left: 130px;
-    background-color: #00bfbf;
+    background-color:#00bfbf;
     box-sizing: border-box;
     border-radius: 32px;
     box-shadow: 20px 20px 32px -8px rgba(0, 0, 0, 1.5);
 }
 
-/* Resto del CSS sin cambios */
-
-@media screen and (max-width: 770px) {
-    main {
-        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas más pequeñas */
-    }
-    .seccion_2 {
-        margin-left: auto; /* Centra la sección en pantallas más pequeñas */
-        margin-right: auto;
-        margin:  30px auto 5px;
-    }
+.contenedor_muneco{
+    width: 100%;
+    height: 50%;
+    padding-top: 20px;
+    text-align: center;
 }
+
+.contenedor_parrafo{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#texto{
+    padding: 20px;
+}
+
+.contenedor_resultado{
+    
+    width: 80%;
+    color: #005f5f;
+    font-size: 24pz;
+    font-weight: bold;
+    height: 40px;
+    padding: 40px;
+    text-align: justify;
+}
+
+.contenedor_copiar{
+    width: 100%;
+    height: 5%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn_copiar{
+    width: 50%;
+    height: 40px;
+    border-radius: 24px;
+    border: 3px;
+    background-color:#005f5f;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn_copiar:hover{
+    transform: scale(1.05);
+    background-color: #495057;
+}
+
+
+footer{
+    width: 100%;
+    height: 60px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+footer p:hover{
+    color: aqua;
+}
+
+/*Accion que hace que desaparesca el muñeco*/
+.ocultar{
+    display: none;
+}
+
+  @media (max-width: 600px) {
+    /* Estilos específicos para pantallas pequeñas */
+
+
+    main {
+        margin: auto;
+        position: relative; /* Cambiado a relativo */
+        width: 100%;
+        min-height: calc(100vh - 70px); /* Ajusta la altura del main */
+        display: flex;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 50px;
+        justify-content: space-between;
+        padding: 0 40px; /* Añade padding horizontal */
+    }
+
+    div{
+        flex-grow: 1;
+        width: 370px;
+        margin: auto;
+    }
+
+
+    .seccion_1 {
+      width: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
+      height: 600px;
+    }
+    .alerta{
+        width: 100%;
+    }
+
+    .seccion_2 div img{
+        height: 300px;
+    }
+    
+    textarea::placeholder{ /*Letras del placeholder*/
+        color: white; /*Color letra*/
+        font-size: 30px; /*Tamaño letra*/
+        text-align: center; /*Aliniado al centro*/
+        line-height: 50px; /*Alineado hacia abajo*/ 
+    }
+    
+
+    .seccion_2 {
+      width: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
+    }
+  }
+  

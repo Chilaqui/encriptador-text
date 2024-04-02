@@ -18,7 +18,7 @@
         <section class="seccion_1">
             <div class="contenedor_caja_texto">
                 <!--Creamos el texarea para poner el placehoder, permite que el usuario ingrese en texto en el espacio con sus respectivas clases-->
-                <textarea placeholder="Ingrese el texto aqui" class="caja_texto"></textarea>
+                <textarea  placeholder="Ingrese el texto aqui" class="caja_texto" ></textarea>
             </div>
             <!--se crea el div para la alerta con su clase-->
             <div class="alerta">
@@ -29,7 +29,6 @@
             <div class="contenedor_botones">
                 <input type="button" class="btn_encriptar" value="Encriptar">
                 <input type="button" class="btn_desencriptar" value="Desencriptar">
-                <a href="https://github.com/Chilaqui" target="_blank" class="creador">Creado por: Héctor Rodríguez</a>
             </div>
         </section>
         <!-- Segunda seccion -->
@@ -39,15 +38,19 @@
             </div>
             <div class="contenedor_parrafo">
                 <h3> <strong>Ningun mensaje fue<br>encontrado</strong> </h3>
-                <p>Ingresa el texto que desees encriptar o <br> desencriptar.</p>
-            </div>
-            <div class="contenedor_copiar">
-                <input type="button" class="btn_copiar" value="Copiar">
+                <p id="texto">Ingresa el texto que desees encriptar o <br> desencriptar.</p>
             </div>
             <div class="contenedor_resultado">
                 <p class="texto_resultado"></p>
             </div>
+            <div class="contenedor_copiar">
+                <input type="button" class="btn_copiar" value="Copiar">
+            </div>
+            
         </section>
+        <footer>
+            <p>Creado por: Hector Rodriguez</p>
+        </footer>
     </main>
     <script src="script.js"></script>
 </body>
